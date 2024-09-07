@@ -1,0 +1,65 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} MyShop {% endblock %}</title>
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/">Логотип</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/categories">Категории товаров</a></li>
+                    <li><a href="/about">О нас</a></li>
+                    <li><a href="/discounts">Скидки</a></li>
+                    <li><a href="/contact">Контакты</a></li>
+                    <li><a href="/cart">Корзина (0)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Разделы -->
+    <section class="featured-products">
+        <h2>Популярные товары</h2>
+        <!-- Повторяющиеся блоки товаров -->
+        <div class="product">
+            {% block content %} {% endblock %}
+        </div>
+        <!-- Добавьте другие товары -->
+    </section>
+
+    <section class="new-arrivals">
+        <h2>Новые поступления</h2>
+        <!-- Повторяющиеся блоки товаров -->
+    </section>
+
+    <section class="special-offers">
+        <h2>Специальные предложения</h2>
+        <!-- Повторяющиеся блоки товаров -->
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <p>Контактная информация: <a href="mailto:info@example.com">info@example.com</a></p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <p><a href="/privacy-policy">Политика конфиденциальности</a></p>
+            <p><a href="/delivery-return">Условия доставки и возврата</a></p>
+        </div>
+    </footer>
+</body>
+</html>
