@@ -1,65 +1,32 @@
 {% load static %}
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} MyShop {% endblock %}</title>
-    <link rel="stylesheet" href="{% static "css/base.css" %}">
+<meta charset="utf-8" />
+<title>{% block title %}Мой магазин{% endblock %}</title>
+<link href="{% static "css/style.css" %}" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="/">Логотип</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/categories">Категории товаров</a></li>
-                    <li><a href="/about">О нас</a></li>
-                    <li><a href="/discounts">Скидки</a></li>
-                    <li><a href="/contact">Контакты</a></li>
-                    <li><a href="/cart">Корзина (0)</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!-- Разделы -->
-    <section class="featured-products">
-        <h2>Популярные товары</h2>
-        <!-- Повторяющиеся блоки товаров -->
-        <div class="product">
-            {% block content %} {% endblock %}
-        </div>
-        <!-- Добавьте другие товары -->
-    </section>
+<div id="header">
+<a href="/" class="logo">Мой магазин</a>
+</div>
+<div id="subheader">
+<div class="cart">
+    {% with total_items=cart|length %}
+    {% if cart|length > 0 %}
+    В корзине:
+    <a href="{% url 'cart:cart_detail' %}">
 
-    <section class="new-arrivals">
-        <h2>Новые поступления</h2>
-        <!-- Повторяющиеся блоки товаров -->
-    </section>
-
-    <section class="special-offers">
-        <h2>Специальные предложения</h2>
-        <!-- Повторяющиеся блоки товаров -->
-    </section>
-
-    <!-- Подвал -->
-    <footer>
-        <div class="container">
-            <p>Контактная информация: <a href="mailto:info@example.com">info@example.com</a></p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </div>
-            <p><a href="/privacy-policy">Политика конфиденциальности</a></p>
-            <p><a href="/delivery-return">Условия доставки и возврата</a></p>
-        </div>
-    </footer>
+    {{ total_items  }} шт ,${{ cart.get_total_price }}
+    </a>
+    {% else %}
+    Корзина пустая.
+    {% endif %}
+    {% endwith %}
+</div>
+</div>
+<div id="content">
+{% block content %}{% endblock %}
+</div>
 </body>
 </html>
