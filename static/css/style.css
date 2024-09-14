@@ -174,13 +174,13 @@ ul.errorlist {
     padding: 15px 100px;
     font-size: 18px;
     overflow: auto;
-    background: #ecf0f1;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background: #7fcbf5;
+    box-shadow: 0 2px 10px rgba(42, 149, 202, 0.472);
 }
 
 #subheader {
-    background: #dfe6e9;
-    color: #555;
+    background: #357e82;
+    color: #000000;
     padding: 20px 100px;
     overflow: auto;
 }
@@ -525,6 +525,12 @@ ul.errorlist {
     margin: 0 0 10px;
     font-size: 14px;
     text-align: left;
+}
+
+.logo-cart {
+    width: 20px;
+    height: 22px;
+    border-radius: 5px;
 }
 
 /* Адаптивные стили для небольших экранов */

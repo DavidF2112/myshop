@@ -4,12 +4,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% block title %}Мой магазин{% endblock %}</title>
+<title>{% block title %}SuperMedia{% endblock %}</title>
 <link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link rel="icon" href="{% static 'img/logo.png' %}" type="image/x-icon"/>
+
 </head>
 <body>
 <header id="header">
-    <a href="/" class="logo">Мой магазин</a>
+    <a href="/" class="logo">SuperMedia</a>
 </header>
 <nav id="subheader">
     <ul>
@@ -20,6 +22,7 @@
         {% endif %}
     </ul>
     <div class="cart">
+        <img src='{% static 'img/logo.png' %}' class="logo-cart">
         {% with total_items=cart|length %}
         {% if total_items > 0 %}
         В корзине:
