@@ -7,11 +7,15 @@
 <title>{% block title %}SuperMedia{% endblock %}</title>
 <link href="{% static 'css/style.css' %}" rel="stylesheet">
 <link rel="icon" href="{% static 'img/logo.png' %}" type="image/x-icon"/>
-
 </head>
 <body>
 <header id="header">
     <a href="/" class="logo">SuperMedia</a>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/">Главная</a></li>
+        </ul>
+    </nav>
 </header>
 <nav id="subheader">
     <ul>
@@ -38,5 +42,23 @@
 <main id="content">
     {% block content %}{% endblock %}
 </main>
+<footer id="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h4>О нас</h4>
+            <p>Мы предоставляем лучшие товары по самым выгодным ценам. Профессиональное обслуживание и быстрая доставка.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Ссылки</h4>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="{% url 'cart:cart_detail' %}">Корзина</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 SuperMedia. Все права защищены.</p>
+    </div>
+</footer>
 </body>
 </html>
