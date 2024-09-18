@@ -19,8 +19,9 @@
 </header>
 <nav id="subheader">
     <ul>
+        <li class="last"><a href="{% url 'contact:contact_us' %}">Связь с нами</a></li>
         {% if request.user.is_authenticated %}
-        <li class="last">{{ request.user.username }} | <a href="{% url 'home:logout' %}">Выйти</a></li>
+        <li class="last_contact">{{ request.user.username }} | <a href="{% url 'home:logout' %}">Выйти</a></li>
         {% else %}
         <li class="last"><a href="{% url 'home:register' %}">Регистрация</a> | <a href="{% url 'home:login' %}">Войти</a></li>
         {% endif %}
@@ -53,6 +54,8 @@
             <ul>
                 <li><a href="/">Главная</a></li>
                 <li><a href="{% url 'cart:cart_detail' %}">Корзина</a></li>
+                <li><a href="{% url 'contact:contact_us' %}">Связь с нами</a></li>
+
             </ul>
         </div>
     </div>

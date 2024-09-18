@@ -1,0 +1,31 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+  Корзина покупок
+{% endblock %}
+
+{% block content %}
+<div class="order-container">
+    {% if user.is_authenticated %}
+    <form method="post" class="order-form">
+        {% csrf_token %}
+        <ul class="order-items">
+            {% for item in cart %}
+            <li class="order-item">
+                <span class="cart-item-name">{{ item.product.name }}</span>
+                <span class="cart-item-price">{{ item.price }} x {{ item.quantity }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        <p class="order-total">Итого: <strong>{{ cart.get_total_price }}</strong></p>
+        <button type="submit" class="button confirm-order-button">Подтвердить заказ</button>
+    </form>
+    {% else %}
+        <div class="auth-links">
+            <a href="{% url 'home:register' %}" class="button">Регистрация</a> | 
+            <a href="{% url 'home:login' %}" class="button">Войти</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

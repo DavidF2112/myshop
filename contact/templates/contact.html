@@ -1,0 +1,47 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+            {% if user.is_authenticated %}
+                <div>
+                <div>
+                <form action="{% url 'contact:contact_us' %}" method="post">
+                    {% csrf_token %}
+                    <div>
+                            <div>
+                                {{ message_form.name }}
+                                <div>
+                                    {{ message_form.name.errors }}
+                                </div>
+                            </div>
+                            <div>
+                                {{ message_form.email }}
+                                <div>
+                                    {{ message_form.email.errors }}
+                                </div>
+                            </div>
+                            <div>
+                                {{ message_form.subject }}
+                                <div>
+                                    {{ message_form.subject.errors }}
+                                </div>
+                            </div>
+                            <div>
+                                {{ message_form.message }}
+                                <div>
+                                    {{ message_form.message.errors }}
+                                </div>
+                            </div>
+                        </div>
+                    <div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+            {% else %}
+            <a href="{% url 'home:register' %}">Регистрация</a> | <a href="{% url 'home:login' %}">Войти</a>
+            {% endif %}
+        </div>
+    </div>
+    <!-- Contact End -->
+{% endblock %}
