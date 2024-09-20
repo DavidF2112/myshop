@@ -1,4 +1,3 @@
-/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,31 +6,22 @@ body {
     color: #333;
     background-color: #f4f4f4;
 }
-
-/* Стили для ссылок */
 a {
     color: #000000;
-    /* Синий цвет для ссылок */
     text-decoration: none;
     transition: color 0.3s, text-shadow 0.3s;
-    /* Плавный переход для цвета и тени */
 }
 
 a:hover {
     color: #000000;
-    /* Темно-синий цвет при наведении */
     text-decoration: underline;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    /* Легкая тень текста для выделения */
 }
 
 a:focus {
     outline: none;
-    /* Убираем стандартный outline при фокусе */
     border-bottom: 2px solid #204a78;
-    /* Синий бордер снизу для фокуса */
     padding-bottom: 2px;
-    /* Добавляем отступ снизу для бордера */
 }
 
 .description-container {
@@ -43,7 +33,6 @@ a:focus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Заголовки */
 .description-title {
     font-size: 2.5rem;
     color: #2c3e50;
@@ -59,7 +48,6 @@ a:focus {
     text-align: center;
 }
 
-/* Оформление списка преимуществ */
 .why-choose-us-list {
     list-style-type: none;
     padding-left: 0;
@@ -74,7 +62,6 @@ a:focus {
     color: #e74c3c;
 }
 
-/* Оформление текста */
 .description,
 .final-text {
     font-size: 1.1rem;
@@ -88,7 +75,6 @@ a:focus {
     text-align: center;
 }
 
-/* Шапка сайта */
 #header {
     background-color: #333;
     color: #fff;
@@ -147,12 +133,10 @@ a:focus {
     text-decoration: underline;
 }
 
-/* Основное содержимое */
 #content {
     padding: 20px;
 }
 
-/* Подвал сайта */
 #footer {
     background-color: #333;
     color: #fff;
@@ -206,7 +190,6 @@ a:focus {
     padding-top: 10px;
 }
 
-/* Страница регистрации */
 .registration-container {
     max-width: 500px;
     margin: 20px auto;
@@ -259,7 +242,6 @@ input[type="number"]:focus {
     background-color: #555;
 }
 
-/* Корзина */
 .cart {
     width: 100%;
     border-collapse: collapse;
@@ -308,7 +290,6 @@ input[type="number"]:focus {
     background-color: #f4f4f4;
 }
 
-/* Дополнительные стили */
 .text-right {
     text-align: right;
 }
@@ -335,7 +316,6 @@ input[type="number"]:focus {
     background-color: #666;
 }
 
-/* Стили для карточек товаров */
 .product-card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -397,7 +377,6 @@ input[type="number"]:focus {
     background-color: #555;
 }
 
-/* Стили для списка товаров */
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -413,7 +392,6 @@ input[type="number"]:focus {
     box-sizing: border-box;
 }
 
-/* Стили для класса .item */
 .item {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -488,10 +466,8 @@ input[type="number"]:focus {
     }
 }
 
-/* Стили для кнопки удаления */
 .delete-button {
     background-color: #d9534f;
-    /* Красный цвет для выделения */
     color: #fff;
     border: none;
     padding: 8px 12px;
@@ -505,43 +481,32 @@ input[type="number"]:focus {
 
 .delete-button:hover {
     background-color: #c9302c;
-    /* Темно-красный цвет при наведении */
     transform: scale(1.05);
-    /* Легкое увеличение при наведении */
 }
 
 .delete-button:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.5);
-    /* Обводка при фокусе */
 }
 
-/* Стили для класса .selected */
 .selected {
     background-color: #e7f0ff;
-    /* Светло-синий фон для выделения */
     border: 2px solid #007bff;
-    /* Синий бордер для выделенного элемента */
     border-radius: 4px;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-    /* Легкая тень для выделения */
     padding: 10px;
     transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .selected:hover {
     background-color: #d0e7ff;
-    /* Более светлый синий при наведении */
     border-color: #0056b3;
-    /* Темно-синий бордер при наведении */
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
-    /* Более заметная тень при наведении */
 }
 
 .selected .item-name {
     font-weight: bold;
     color: #007bff;
-    /* Синий цвет текста для выделенного элемента */
 }
 
 .product-detail {
@@ -552,7 +517,6 @@ input[type="number"]:focus {
     border-radius: 8px;
     background-color: #f9f9f9;
     text-align: center;
-    /* Центрируем содержимое по горизонтали */
 }
 
 .product-image {
@@ -560,9 +524,7 @@ input[type="number"]:focus {
     height: auto;
     border-radius: 8px;
     display: block;
-    /* Убедитесь, что изображение является блочным элементом */
     margin: 0 auto;
-    /* Центрируем изображение */
 }
 
 .product-name {
@@ -612,87 +574,57 @@ input[type="number"]:focus {
 
 .order-container {
     font-family: Arial, sans-serif;
-    /* Измените на нужный шрифт */
     color: #333;
-    /* Цвет текста */
 }
 
 .order-form {
     max-width: 600px;
-    /* Максимальная ширина формы */
     margin: 0 auto;
-    /* Центрирование формы */
     padding: 20px;
-    /* Отступы внутри формы */
     background-color: #f9f9f9;
-    /* Фон формы */
     border-radius: 8px;
-    /* Закругленные углы */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* Тень для формы */
 }
 
 .order-items {
     list-style-type: none;
-    /* Убираем маркеры у списка */
     padding: 0;
-    /* Убираем внутренние отступы */
 }
 
 .order-item {
     display: flex;
-    /* Для расположения элементов в строку */
     justify-content: space-between;
-    /* Распределение по краям */
     padding: 10px 0;
-    /* Отступы между элементами */
     border-bottom: 1px solid #ddd;
-    /* Линия между элементами */
 }
 
 .cart-item-name {
     font-size: 20px;
-    /* Размер шрифта для названия товара */
     color: #555;
-    /* Цвет текста названия товара */
 }
 
 .cart-item-price {
     font-size: 18px;
-    /* Размер шрифта для цены товара */
     color: #777;
-    /* Цвет текста цены товара */
 }
 
 .order-total {
     font-size: 24px;
-    /* Размер шрифта для итоговой суммы */
     font-weight: bold;
-    /* Полужирный текст */
     margin-top: 20px;
-    /* Отступ сверху */
     color: #333;
-    /* Цвет текста итоговой суммы */
 }
 
 .confirm-order-button {
     background-color: #5a5a5a;
-    /* Цвет фона кнопки */
     color: white;
-    /* Цвет текста кнопки */
     font-size: 18px;
-    /* Размер шрифта кнопки */
     padding: 10px 20px;
-    /* Отступы внутри кнопки */
     border: none;
-    /* Убираем рамку */
     border-radius: 5px;
-    /* Закругленные углы кнопки */
     cursor: pointer;
-    /* Указатель при наведении */
 }
 
 .confirm-order-button:hover {
     background-color: #444;
-    /* Цвет фона кнопки при наведении */
 }
