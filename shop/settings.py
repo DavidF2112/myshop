@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'cart.apps.CartConfig',
     'contact.apps.ContactConfig',
+    'aboutshop.apps.AboutshopConfig'
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,21 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+Описание
+{% endblock %}
+{% block content %}
+<div class="description-container">
+    <h1 class="description-title">Добро пожаловать в {{ name }}</h1>
+    <p class="description">
+        {{aboutshop.name}} — {{aboutshop.description}}
+    </p>
+    <h2 class="why-choose-us-title">Почему выбирают {{ name }}:</h2>
+    <ul class="why-choose-us-list">
+        <li><strong>Гарантия качества:</strong> все товары сертифицированы и имеют гарантию от производителя.</li>
+        <li><strong>Конкурентные цены:</strong> у нас регулярные акции и скидки на популярные товары.</li>
+        <li><strong>Быстрая доставка:</strong> оперативно доставим ваш заказ по всей стране.</li>
+        <li><strong>Удобные способы оплаты:</strong> поддерживаем как онлайн-оплату, так и оплату при получении.</li>
+    </ul>
+    <p class="final-text">Погрузитесь в мир технологий с {{aboutshop.name}} — качественная техника по доступным ценам!</p>
+</div>
+{% endblock %}

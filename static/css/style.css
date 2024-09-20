@@ -34,6 +34,59 @@ a:focus {
     /* Добавляем отступ снизу для бордера */
 }
 
+.description-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки */
+.description-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.why-choose-us-title {
+    font-size: 1.8rem;
+    color: #16a085;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Оформление списка преимуществ */
+.why-choose-us-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.why-choose-us-list li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.why-choose-us-list li strong {
+    color: #e74c3c;
+}
+
+/* Оформление текста */
+.description,
+.final-text {
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #555;
+}
+
+.final-text {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
 
 /* Шапка сайта */
 #header {
